@@ -1,0 +1,145 @@
+/* =========================================
+   1. RESET BÁSICO (Memoriza esto)
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Evita que el padding rompa los tamaños */
+    font-family: Arial, sans-serif;
+}
+
+/* =========================================
+   2. VARIABLES DE COLOR (Accesibilidad)
+========================================= */
+body {
+    background-color: #f4f4f4; /* Gris muy claro */
+    color: #333333; /* Texto oscuro para alto contraste */
+}
+
+.btn-primario {
+    background-color: #003366; /* Azul oscuro */
+    color: #ffffff; /* Letra blanca (Alto contraste) */
+    padding: 12px 24px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* =========================================
+   3. ESTRUCTURA (Flexbox)
+========================================= */
+/* Header con logo a la izquierda y menú a la derecha */
+.cabecera-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px 30px;
+    border-bottom: 2px solid #dddddd;
+}
+
+/* El menú usa listas, las alineamos horizontalmente */
+.navegacion ul {
+    display: flex;
+    list-style: none; /* Quita los puntos de la lista */
+    gap: 20px; /* Separación entre enlaces */
+}
+
+.navegacion a {
+    text-decoration: none;
+    color: #003366;
+    font-weight: bold;
+}
+
+/* Hero Section centrado */
+.seccion-hero {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.seccion-hero p {
+    margin-bottom: 20px;
+}
+
+/* Listas de beneficios */
+.seccion-beneficios {
+    padding: 40px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.lista-beneficios {
+    list-style-position: inside;
+    margin-top: 20px;
+}
+
+/* Grilla de tarjetas Flexbox */
+.seccion-categorias {
+    padding: 40px;
+    text-align: center;
+}
+
+.grilla-tarjetas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tarjeta {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    width: 300px;
+}
+
+/* Formulario */
+.seccion-registro {
+    background-color: #e9ecef;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.formulario input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* =========================================
+   4. MEDIA QUERIES (Responsive Design Móvil)
+========================================= */
+@media (max-width: 768px) {
+    /* El header cambia a columna */
+    .cabecera-principal {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    /* El menú también cambia a columna */
+    .navegacion ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Las tarjetas se apilan una debajo de otra */
+    .grilla-tarjetas {
+        flex-direction: column;
+        align-items: center;
+    }
+}

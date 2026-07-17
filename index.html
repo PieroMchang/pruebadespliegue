@@ -1,13 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FitPro Match - Tu mejor versión</title>
+    <!-- Conexión al CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Prueba Despliegue Git Hub</h1>
+
+    <!-- CABECERA -->
+    <header class="cabecera-principal">
+        <img src="assets/images/logo.png" alt="Logotipo oficial de FitPro Match" class="logo">
+        <nav class="navegacion">
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#categorias">Servicios</a></li>
+                <li><a href="#registro">Únete</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN 1: HERO -->
+        <section id="hero" class="seccion-hero">
+            <h1>Encuentra a tu entrenador ideal</h1>
+            <p>Conectamos profesionales del fitness con personas dispuestas a cambiar su vida.</p>
+            <a href="#registro" class="btn-primario">Empieza hoy</a>
+        </section>
+
+        <!-- SECCIÓN 2: BENEFICIOS (Uso de listas solicitado) -->
+        <section id="beneficios" class="seccion-beneficios">
+            <h2>¿Por qué elegirnos?</h2>
+            <ul class="lista-beneficios">
+                <li>Entrenadores certificados y verificados.</li>
+                <li>Planes de alimentación personalizados.</li>
+                <li>Seguimiento de progreso 100% online.</li>
+            </ul>
+        </section>
+
+        <!-- SECCIÓN 3: CATEGORÍAS (Grilla Flexbox) -->
+        <section id="categorias" class="seccion-categorias">
+            <h2>Nuestras Especialidades</h2>
+            <div class="grilla-tarjetas">
+                <!-- Tarjeta 1 -->
+                <article class="tarjeta">
+                    <h3>Musculación</h3>
+                    <p>Entrenamiento de fuerza e hipertrofia en gimnasio.</p>
+                </article>
+                <!-- Tarjeta 2 -->
+                <article class="tarjeta">
+                    <h3>Nutrición</h3>
+                    <p>Dietas para recomposición corporal y rendimiento.</p>
+                </article>
+                <!-- Tarjeta 3 -->
+                <article class="tarjeta">
+                    <h3>Deportes de Contacto</h3>
+                    <p>Preparación física para artes marciales mixtas.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: FORMULARIO DE REGISTRO (Validación JS) -->
+        <section id="registro" class="seccion-registro">
+            <h2>Regístrate como Profesional</h2>
+            <form class="formulario">
+                <input type="text" id="nombre" placeholder="Nombre completo">
+                <input type="email" id="correo" placeholder="Correo electrónico">
+                <input type="password" id="pass1" placeholder="Crea tu contraseña">
+                <input type="password" id="pass2" placeholder="Confirma tu contraseña">
+                <!-- type="button" evita que la página recargue al hacer clic -->
+                <button type="button" class="btn-primario" onclick="validarRegistro()">Crear cuenta</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <p>Todos los derechos reservados &copy; 2026 - FitPro Match.</p>
+        <ul class="enlaces-legales">
+            <li>Términos y condiciones</li>
+            <li>Políticas de privacidad</li>
+        </ul>
+    </footer>
+
+    <!-- Conexión al JS -->
     <script src="js/main.js"></script>
 </body>
 </html>
